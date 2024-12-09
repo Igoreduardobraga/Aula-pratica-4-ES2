@@ -9,16 +9,16 @@ class Tarefa:
 
     def __repr__(self):
         status = "✅" if self.concluida else "❌"
-        return f"{status}{self.titulo}"
+        return f"{status} {self.titulo}"
 
 
-class Gerenciador:
+class GerenciadorTarefas:
     def __init__(self):
         self.tarefas = []
 
     def adicionar_tarefa(self, titulo, descricao):
-        tarefa_nova = Tarefa(self, titulo, descricao)
-        self.tarefas.append(Tarefa(self, titulo, descricao))
+        tarefa_nova = Tarefa(titulo, descricao)
+        self.tarefas.append(Tarefa(titulo, descricao))
         return tarefa_nova
 
     def listar_tarefas_pendentes(self):
