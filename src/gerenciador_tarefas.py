@@ -18,7 +18,7 @@ class GerenciadorTarefas:
 
     def adicionar_tarefa(self, titulo, descricao):
         tarefa_nova = Tarefa(titulo, descricao)
-        self.tarefas.append(Tarefa(titulo, descricao))
+        self.tarefas.append(tarefa_nova)
         return tarefa_nova
 
     def listar_tarefas_pendentes(self):
